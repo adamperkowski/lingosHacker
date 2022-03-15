@@ -60,6 +60,3 @@ for i in range(ilee):
             x = x + 1
     else:
         print(' [!]  Słowo nie zostało znalezione w bazie danych')
-
-# https://www.youtube.com/watch?v=6DjFscX4I_c
-# Trzeba na komputerze klienta zainstalowac tesseract i polski jezyk rozpoznawania
