@@ -7,6 +7,9 @@ import pytesseract
 x = int()
 pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 
+def wyjdz():
+    input('\n [*]  Aby wyłączyć bota, naduś dowolny guzioł  ')
+
 print(' [ LINGOS HACKER ]')
 sleep(0.2)
 print(' [ lingos.pl cheat tool ]')
@@ -22,11 +25,11 @@ sleep(0.5)
 print('---------------------------------')
 
 try:
-    dictionary = open("7b.dict", encoding='utf8')
+    dictionary = open("lingos.dict", encoding='utf8')
     linesdict = dictionary.readlines()
 except:
     print(' [!]  Wystąpiły problemy z bazą danych. Ponowne przeinstalowanie programu lub pobranie bazy powinno rozwiązać ten problem')
-    exit()
+    wyjdz()
 
 sleep(0.5)
 
@@ -34,13 +37,13 @@ ilee = int(input(" [?]  Wprowadź liczbę słów (1 lekcja = 20 słów)   "))
 
 if ilee == 0:
     print(" [*]  Mam nadzieję że wrócisz 😥")
-    sleep(2)
-    exit()
+    wyjdz()
 
 print(' [*]  Zmień okno na przeglądarkę w ciągu 3 sekund')
 sleep(3)
 
 for i in range(ilee):
+    sleep(1.5)
     skrin = pyautogui.screenshot(region=(690,250, 750,62))
     skrin.save('lingos.png')
     img = cv2.imread('lingos.png')
@@ -60,3 +63,5 @@ for i in range(ilee):
             x = x + 1
     else:
         print(' [!]  Słowo nie zostało znalezione w bazie danych')
+
+wyjdz()
