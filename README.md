@@ -1,3 +1,3 @@
 # lingosHacker
- Bot for lingos
+ Bot for lingos<br>
  Use at ur own risk!
