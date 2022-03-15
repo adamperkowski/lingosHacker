@@ -1,2 +1,3 @@
 # lingosHacker
- O takie repo w PyCharmie
+ Bot for lingos
+ Use at ur own risk!
