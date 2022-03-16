@@ -4,7 +4,6 @@ from PIL import Image
 import cv2
 import pytesseract
 
-x = int()
 pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 
 def wyjdz():
@@ -39,10 +38,11 @@ if ilee == 0:
     print(" [*]  Mam nadzieję że wrócisz 😥")
     wyjdz()
 
-print(' [*]  Zmień okno na przeglądarkę w ciągu 3 sekund')
+print(' [*]  Zmień okno na przeglądarkę w ciągu 4.5 sekuny')
 sleep(3)
 
 for i in range(ilee):
+    x = int()
     sleep(1.5)
     skrin = pyautogui.screenshot(region=(690,250, 750,62))
     skrin.save('lingos.png')
