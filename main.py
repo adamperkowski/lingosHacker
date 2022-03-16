@@ -8,6 +8,7 @@ pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 
 def wyjdz():
     input('\n [*]  Aby wyłączyć bota, naduś dowolny guzioł  ')
+    exit()
 
 print(' [ LINGOS HACKER ]')
 sleep(0.2)
