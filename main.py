@@ -62,6 +62,9 @@ for i in range(ilee):
             #else:
             #    print('nie ma')
             x = x + 1
+    elif textBef == 'Nowe słowo od nauczyciela!\n':
+        print('\n [*]  Nowe słowo!')
+        wyjdz()
     else:
         print(' [!]  Słowo nie zostało znalezione w bazie danych')
 
