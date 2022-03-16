@@ -1,3 +1,3 @@
 # lingosHacker
- Bot for lingos.pl<br>
+ Bot for <a href="https://lingos.pl">Lingos</a><br>
  Use at ur own risk!
