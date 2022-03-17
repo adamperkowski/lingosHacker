@@ -50,7 +50,7 @@ for i in range(ilee):
     img = cv2.imread('lingos.png')
     img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     textBef = pytesseract.image_to_string(img, lang='pol')
-
+    print(textBef)
     if textBef in linesdict:
         for line in linesdict:
             if str(line) == str(textBef):
@@ -66,6 +66,7 @@ for i in range(ilee):
         print('\n [*]  Nowe słowo!')
         wyjdz()
     else:
-        print(' [!]  Słowo nie zostało znalezione w bazie danych')
+        input(''' [!]  Słowo nie zostało znalezione w bazie danych
+ [!]  Musisz wpisać i zatwierdzić je ręcznie    ''')
 
 wyjdz()
