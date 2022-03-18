@@ -63,8 +63,8 @@ for i in range(ilee):
             #    print('nie ma')
             x = x + 1
     elif textBef == 'Nowe słowo od nauczyciela!\n':
-        print('\n [*]  Nowe słowo!')
-        wyjdz()
+        input('''\n [*]  Nowe słowo!
+Wpisz je i zatwierdź ręcznie    ''')
     else:
         input(''' [!]  Słowo nie zostało znalezione w bazie danych
  [!]  Musisz wpisać i zatwierdzić je ręcznie    ''')
