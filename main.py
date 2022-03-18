@@ -64,7 +64,7 @@ for i in range(ilee):
             x = x + 1
     elif textBef == 'Nowe słowo od nauczyciela!\n':
         input('''\n [*]  Nowe słowo!
- [*]  Wpisz je i zatwierdź ręcznie    ''')
+ [*]  Wpisz je i zatwierdź ręcznie (auto dodawanie do bazy wkrótce)    ''')
     else:
         input(''' [!]  Słowo nie zostało znalezione w bazie danych
  [!]  Musisz wpisać i zatwierdzić je ręcznie    ''')
