@@ -45,7 +45,7 @@ sleep(3)
 for i in range(ilee):
     x = int()
     sleep(1.5)
-    skrin = pyautogui.screenshot(region=(690,250, 750,30))
+    skrin = pyautogui.screenshot(region=(690,262, 750,30))
     skrin.save('lingos.png')
     img = cv2.imread('lingos.png')
     img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
