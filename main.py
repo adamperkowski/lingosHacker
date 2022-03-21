@@ -8,6 +8,7 @@ pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 
 def wyjdz():
     input('\n [*]  Aby wyłączyć bota, naduś dowolny guzioł  ')
+    dictionary.close()
     exit()
 
 print(' [ LINGOS HACKER ]')
@@ -25,7 +26,7 @@ sleep(0.5)
 print('---------------------------------')
 
 try:
-    dictionary = open("lingos.dict", encoding='utf8')
+    dictionary = open("lingos.dict", "r+", encoding='utf8')
     linesdict = dictionary.readlines()
 except:
     print(' [!]  Wystąpiły problemy z bazą danych. Ponowne przeinstalowanie programu lub pobranie bazy powinno rozwiązać ten problem')
@@ -45,13 +46,17 @@ sleep(3)
 for i in range(ilee):
     x = int()
     sleep(1.5)
+
     skrin = pyautogui.screenshot(region=(690,262, 750,30))
     skrin.save('lingos.png')
+
     img = cv2.imread('lingos.png')
     img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+
     textBef = pytesseract.image_to_string(img, lang='pol')
-    print(textBef)
+
     if textBef in linesdict:
+        print(f'\n{textBef}')
         for line in linesdict:
             if str(line) == str(textBef):
                 pyautogui.typewrite(linesdict[x+1])
@@ -62,11 +67,44 @@ for i in range(ilee):
             #else:
             #    print('nie ma')
             x = x + 1
+
     elif textBef == 'Nowe słowo od nauczyciela!\n':
-        input('''\n [*]  Nowe słowo!
- [*]  Wpisz je i zatwierdź ręcznie (auto dodawanie do bazy wkrótce)    ''')
+        print('''\n [*]  Nowe słowo!
+ [*]  Zostanie dodane do bazy danych automatycznie.''')
+        #1 ----------------------------------------------------
+        skrin = pyautogui.screenshot(region=(703,384, 593,30))
+        skrin.save('lingos.png')
+
+        img = cv2.imread('lingos.png')
+        img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+    
+        textBef = pytesseract.image_to_string(img, lang='pol')
+        print(f'\n{textBef}')
+
+        dictionary.write(f'{textBef}')
+        #2 ----------------------------------------------------
+        skrin = pyautogui.screenshot(region=(703,355, 655,30))
+        skrin.save('lingos.png')
+
+        img = cv2.imread('lingos.png')
+        img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+    
+        textBef = pytesseract.image_to_string(img, lang='pol')
+        print(f'\n{textBef}')
+
+        dictionary.write(f'{textBef}')
+
+        pyautogui.press('enter')
+        sleep(0.9)
+
+        i = i - 1
+        dictionary.close()
+        dictionary = open("lingos.dict", "r+", encoding='utf8')
+        linesdict = dictionary.readlines()
+
     else:
-        input(''' [!]  Słowo nie zostało znalezione w bazie danych
+        print(f'\n{textBef}')
+        input('''\n [!]  Słowo nie zostało znalezione w bazie danych
  [!]  Musisz wpisać i zatwierdzić je ręcznie    ''')
 
 wyjdz()
