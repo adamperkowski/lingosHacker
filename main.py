@@ -94,7 +94,7 @@ for i in range(ilee):
 
         dictionary.write(f'{textBef}')
 
-        pyautogui.press('enter')
+        pyautogui.click(pyautogui.locateOnScreen('dalej.png'))
         sleep(0.9)
 
         i = i - 1
