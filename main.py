@@ -5,14 +5,27 @@ import cv2
 import pytesseract
 from keyboard import is_pressed
 from playsound import playsound
+from notifypy import Notify
 
 pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 inpt = str()
 
 def wyjdz():
+    notification = Notify()
+    notification.title = "Lingos Hacker"
+    notification.message = "Bot zakończył działanie"
+    notification.icon = "lingoshecker.png"
+    notification.application_name = "Lingos Hacker"
+    notification.send()
+
     input('\n [*]  Aby wyłączyć bota, naduś dowolny guzioł  ')
     dictionary.close()
+
     exit()
+
+Xnotif = open("notifications.option")
+notif = Xnotif.read()
+Xnotif.close()
 
 print(' [ LINGOS HACKER ]')
 sleep(0.2)
@@ -39,10 +52,32 @@ except:
 
 sleep(0.5)
 
-ilee = int(input(" [?]  Wprowadź liczbę słów (1 lekcja = 20 słów)   "))
+ilee = int(input(" [?]  Wprowadź liczbę słów (1 lekcja = 20 słów) (wpisz '12345', aby wejść do ustawień)   "))
 
 if ilee == 0:
     print(" [*]  Mam nadzieję że wrócisz 😥")
+    wyjdz()
+elif ilee == int(12345):
+    print('''---------------------------------USTAWIENIA---------------------------------
+  [ 1 ]  Powiadomienia
+''')
+
+    inpt = int(input('Wybierz opcję:    '))
+
+    if inpt == 1:
+        ustaw = open("notifications.option", "w")
+
+        inpt = input('  [?]  Włączyć/wyłączyć powiadomienia? (wł/wył)   ')
+
+        if inpt == 'wł' or inpt == 'Wł' or inpt == 'WŁ' or inpt == 'wŁ':
+            ustaw.write('True')
+        else:
+            ustaw.write('False')
+        ustaw.close()
+            
+    else:
+        print(' [!]  Niestety nie ma takiej opcji :(')
+
     wyjdz()
 
 print(' [*]  Zmień okno na Firefoxa i naduś F1')
@@ -51,9 +86,17 @@ while is_pressed('f1') != True:
     continue
 
 #--------------------------------------------------------------------------MAIN--------------------------------------------------------------------------
+if notif == 'True':
+    notification = Notify()
+    notification.title = "No to zaczynamy!"
+    notification.message = f"Liczba słów: {ilee}"
+    notification.icon = "lingoshecker.png"
+    notification.application_name = "Lingos Hacker"
+    notification.send()
+
 for i in range(ilee):
     x = int()
-    sleep(1.5)
+    sleep(1)
 
     skrin = pyautogui.screenshot(region=(690,262, 750,30))
     skrin.save('lingos.png')
@@ -116,7 +159,14 @@ for i in range(ilee):
 
     else:
         print(f'\n{textBef}')
-        #playsound(u"oof.mp3")
+
+        notification = Notify()
+        notification.title = "Nieznane słowo"
+        notification.message = "Słowo nie zostało znalezione w bazie danych"
+        notification.icon = "lingoshecker.png"
+        notification.application_name = "Lingos Hacker"
+        notification.send()
+
         inpt = input('''\n [!]  Słowo nie zostało znalezione w bazie danych
  [?]  Czy chcesz dodać je do bazy danych?  (T/n)    ''')
 
@@ -125,7 +175,7 @@ for i in range(ilee):
                 inpt = str(input('\n [?]  Wpisz słowo po polsku (musi być DOKŁADNIE tak samo jak w lingosie)    '))
                 dictionary.write(f"\n{inpt}")
                 inpt = str(input('\n [?]  Wpisz słowo po angielsku    '))
-                dictionary.write(f"\n{inpt}\n")
+                dictionary.write(f"\n{inpt}")
 
                 print('\n [*]  Słowo zostało pomyślnie dodane do bazy danych. Wróć do Firefoxa i naduś F1    ')
                 
