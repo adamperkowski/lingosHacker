@@ -167,7 +167,7 @@ for i in range(ilee):
         notification.application_name = "Lingos Hacker"
         notification.send()
 
-        inpt = input('''\n [!]  Słowo nie zostało znalezione w bazie danych
+        inpt = input(''' [!]  Słowo nie zostało znalezione w bazie danych
  [?]  Czy chcesz dodać je do bazy danych?  (T/n)    ''')
 
         if inpt == 'T' or inpt == 't':
@@ -177,7 +177,7 @@ for i in range(ilee):
                 inpt = str(input('\n [?]  Wpisz słowo po angielsku    '))
                 dictionary.write(f"\n{inpt}")
 
-                print('\n [*]  Słowo zostało pomyślnie dodane do bazy danych. Wróć do Firefoxa i naduś F1    ')
+                print('\n [*]  Słowo zostało pomyślnie dodane do bazy danych. Wróć do Firefoxa i naduś F1\n')
                 
                 while is_pressed('f1') != True:
                     continue
