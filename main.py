@@ -171,11 +171,27 @@ for i in range(ilee):
  [?]  Czy chcesz dodać je do bazy danych?  (T/n)    ''')
 
         if inpt == 'T' or inpt == 't':
-            try:
-                inpt = str(input('\n [?]  Wpisz słowo po polsku (musi być DOKŁADNIE tak samo jak w lingosie)    '))
-                dictionary.write(f"\n{inpt}")
+
+            inpt = str(input('\n [?]  Wpisz słowo po polsku (musi być DOKŁADNIE tak samo jak w lingosie)    '))
+
+            if f'{inpt}\n' in linesdict:
+                print(f"\n [!]  Ale '{inpt}' jest już w bazie... Coś się pokićkało...")
+
+                print('\n [*]  Wróć do Firefoxa i naduś F1\n')
+                while is_pressed('f1') != True:
+                    continue
+            else:
+                try:
+                    dictionary.write(f"\n{inpt}")
+                except:
+                    print('\n [!]  Wystąpił problem z dodaniem słowa do bazy danych. Jeśli błąd będzie się powtarzał, skontaktuj się ze mną na FB lub Discordzie    ')
+                    wyjdz()
                 inpt = str(input('\n [?]  Wpisz słowo po angielsku    '))
-                dictionary.write(f"\n{inpt}")
+                try:
+                    dictionary.write(f"\n{inpt}")
+                except:
+                    print('\n [!]  Wystąpił problem z dodaniem słowa do bazy danych. Jeśli błąd będzie się powtarzał, skontaktuj się ze mną na FB lub Discordzie    ')
+                    wyjdz()
 
                 print('\n [*]  Słowo zostało pomyślnie dodane do bazy danych. Wróć do Firefoxa i naduś F1\n')
                 
@@ -185,9 +201,6 @@ for i in range(ilee):
                 dictionary.close()
                 dictionary = open("lingos.dict", "r+", encoding='utf8')
                 linesdict = dictionary.readlines()
-            except:
-                input('\n [!]  Wystąpił problem z dodaniem słowa do bazy danych. Jeśli błąd będzie się powtarzał, skontaktuj się ze mną na FB lub Discordzie    ')
-                wyjdz()
 
         else:
             print('\n [*]  W takim razie musisz wpisać i zatwierdzić je ręcznie :(    ')
