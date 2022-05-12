@@ -4,7 +4,6 @@ from PIL import Image
 import cv2
 import pytesseract
 from keyboard import is_pressed
-from playsound import playsound
 from notifypy import Notify
 
 pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
