@@ -116,7 +116,7 @@ for i in range(ilee):
         pyautogui.press('enter')
 
     elif textBef == 'Nowe słowo od nauczyciela!\n':
-        print('''\n [*]  Nowe słowo!
+        print(''' [*]  Nowe słowo!
  [*]  Zostanie dodane do bazy danych automatycznie.''')
 
         #1 ----------------------------------------------------
