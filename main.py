@@ -4,41 +4,44 @@ from PIL import Image
 import cv2
 import pytesseract
 from keyboard import is_pressed
-from notifypy import Notify
+from colorama import Fore, init
+init()
 
 pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 inpt = str()
 
 def wyjdz():
-    notification = Notify()
-    notification.title = "Lingos Hacker"
-    notification.message = "Bot zakończył działanie"
-    notification.icon = "lingoshecker.png"
-    notification.application_name = "Lingos Hacker"
-    notification.send()
+    if notif == 'True':
+            pyautogui.alert(text='Bot zakończył działanie', title='Lingos Hacker', button='OK')
 
-    input('\n [*]  Aby wyłączyć bota, naduś dowolny guzioł  ')
+    input(f'\n [*]  Aby wyłączyć bota, naduś dowolny guzioł  ')
     dictionary.close()
 
     exit()
 
-Xnotif = open("notifications.option")
+try:
+    Xnotif = open("notifications.option")
+except:
+    Xnotif = open("notifications.option", 'a')
+    Xnotif.close()
+    Xnotif = open("notifications.option")
+
 notif = Xnotif.read()
 Xnotif.close()
 
-print(' [ LINGOS HACKER ]')
+print(f' [ {Fore.RED}L{Fore.GREEN}I{Fore.YELLOW}N{Fore.BLUE}G{Fore.MAGENTA}O{Fore.CYAN}S {Fore.RED}H{Fore.GREEN}A{Fore.YELLOW}C{Fore.BLUE}K{Fore.MAGENTA}E{Fore.CYAN}R {Fore.RESET}]')
 sleep(0.2)
-print(' [ lingos.pl cheat tool ]')
+print(f' [ {Fore.GREEN}lingos{Fore.RESET}.pl {Fore.RED}cheat{Fore.RESET} tool ]')
 sleep(0.2)
-print(' [ Created by Adaśko ]')
+print(f' [ Created by {Fore.RED}A{Fore.GREEN}d{Fore.YELLOW}a{Fore.BLUE}ś{Fore.MAGENTA}k{Fore.CYAN}o{Fore.RESET} ]')
 sleep(0.2)
-print(' [ GitHub: adas1per ]')
+print(f' [ GitHub: {Fore.MAGENTA}adas1per{Fore.RESET} ]')
 sleep(0.2)
-print(' [ Discord: adask00#0232 ]')
+print(f' [ Discord: {Fore.BLUE}adask00#0232{Fore.RESET} ]')
 sleep(0.2)
-print(' [ Snapchat: adaskotodebil ]')
+print(f' [ Snapchat: {Fore.YELLOW}adaskotodebil{Fore.RESET} ]')
 sleep(0.2)
-print(' [ Instagram: adas_per ]')
+print(f' [ Instagram: {Fore.GREEN}adas_per{Fore.RESET} ]')
 sleep(0.5)
 print('---------------------------------')
 
@@ -46,15 +49,16 @@ try:
     dictionary = open("lingos.dict", "r+", encoding='utf8')
     linesdict = dictionary.readlines()
 except:
-    print(' [!]  Wystąpiły problemy z bazą danych. Ponowne przeinstalowanie programu lub pobranie bazy powinno rozwiązać ten problem')
+    print(f' [{Fore.RED}!{Fore.RESET}]  Wystąpiły problemy z bazą danych. Ponowne przeinstalowanie programu lub pobranie bazy powinno rozwiązać ten problem')
     wyjdz()
 
 sleep(0.5)
 
-ilee = int(input(" [?]  Wprowadź liczbę słów (1 lekcja = 20 słów) (wpisz '12345', aby wejść do ustawień)   "))
+print(f" [{Fore.BLUE}?{Fore.RESET}]  ", end='')
+ilee = int(input("Wprowadź liczbę słów (1 lekcja = 20 słów) (wpisz '12345', aby wejść do ustawień)   "))
 
 if ilee == 0:
-    print(" [*]  Mam nadzieję że wrócisz 😥")
+    print(f" [{Fore.GREEN}*{Fore.RESET}]  Mam nadzieję że wrócisz 😥")
     wyjdz()
 elif ilee == int(12345):
     print('''---------------------------------USTAWIENIA---------------------------------
@@ -66,7 +70,8 @@ elif ilee == int(12345):
     if inpt == 1:
         ustaw = open("notifications.option", "w")
 
-        inpt = input('  [?]  Włączyć/wyłączyć powiadomienia? (wł/wył)   ')
+        print(f" [{Fore.BLUE}?{Fore.RESET}]  ", end='')
+        inpt = input('Włączyć/wyłączyć powiadomienia? (wł/wył)   ')
 
         if inpt == 'wł' or inpt == 'Wł' or inpt == 'WŁ' or inpt == 'wŁ':
             ustaw.write('True')
@@ -75,23 +80,18 @@ elif ilee == int(12345):
         ustaw.close()
             
     else:
-        print(' [!]  Niestety nie ma takiej opcji :(')
+        print(f' [{Fore.RED}!{Fore.RESET}]  Niestety nie ma takiej opcji 😞')
 
     wyjdz()
 
-print(' [*]  Zmień okno na Firefoxa i naduś F1')
+print(f' [{Fore.GREEN}*{Fore.RESET}]  Zmień okno na Firefoxa i naduś F1')
 
 while is_pressed('f1') != True:
     continue
 
 #--------------------------------------------------------------------------MAIN--------------------------------------------------------------------------
-if notif == 'True':
-    notification = Notify()
-    notification.title = "No to zaczynamy!"
-    notification.message = f"Liczba słów: {ilee}"
-    notification.icon = "lingoshecker.png"
-    notification.application_name = "Lingos Hacker"
-    notification.send()
+#if notif == 'True':
+    #powiadomienie
 
 for i in range(ilee):
     x = int()
@@ -116,8 +116,8 @@ for i in range(ilee):
         pyautogui.press('enter')
 
     elif textBef == 'Nowe słowo od nauczyciela!\n':
-        print(''' [*]  Nowe słowo!
- [*]  Zostanie dodane do bazy danych automatycznie.''')
+        print(f''' [{Fore.GREEN}*{Fore.RESET}]  Nowe słowo!
+ [{Fore.GREEN}*{Fore.RESET}]  Zostanie dodane do bazy danych automatycznie.''')
 
         #1 ----------------------------------------------------
         skrin = pyautogui.screenshot(region=(703,384, 593,30))
@@ -159,40 +159,39 @@ for i in range(ilee):
     else:
         print(f'\n{textBef}')
 
-        notification = Notify()
-        notification.title = "Nieznane słowo"
-        notification.message = "Słowo nie zostało znalezione w bazie danych"
-        notification.icon = "lingoshecker.png"
-        notification.application_name = "Lingos Hacker"
-        notification.send()
+        if notif == 'True':
+            pyautogui.alert(text='Słowo nie zostało znalezione w bazie', title='Lingos Hacker', button='OK')
 
-        inpt = input(''' [!]  Słowo nie zostało znalezione w bazie danych
- [?]  Czy chcesz dodać je do bazy danych?  (T/n)    ''')
+        inpt = print(f' [{Fore.RED}!{Fore.RESET}]  Słowo nie zostało znalezione w bazie danych')
+        print(f" [{Fore.BLUE}?{Fore.RESET}]  ", end='')
+        inpt= print('Czy chcesz dodać je do bazy danych?  (T/n)    ')
 
         if inpt == 'T' or inpt == 't':
-
-            inpt = str(input('\n [?]  Wpisz słowo po polsku (musi być DOKŁADNIE tak samo jak w lingosie)    '))
+            
+            print(f" [{Fore.BLUE}?{Fore.RESET}]  ", end='')
+            inpt = str(input('Wpisz słowo po polsku (musi być DOKŁADNIE tak samo jak w lingosie)    '))
 
             if f'{inpt}\n' in linesdict:
-                print(f"\n [!]  Ale '{inpt}' jest już w bazie... Coś się pokićkało...")
+                print(f"\n [{Fore.RED}!{Fore.RESET}]  Ale '{inpt}' jest już w bazie... Coś się pokićkało...")
 
-                print('\n [*]  Wróć do Firefoxa i naduś F1\n')
+                print(f'\n [{Fore.GREEN}*{Fore.RESET}]  Wróć do Firefoxa i naduś F1\n')
                 while is_pressed('f1') != True:
                     continue
             else:
                 try:
                     dictionary.write(f"\n{inpt}")
                 except:
-                    print('\n [!]  Wystąpił problem z dodaniem słowa do bazy danych. Jeśli błąd będzie się powtarzał, skontaktuj się ze mną na FB lub Discordzie    ')
+                    print(f'\n [{Fore.RED}!{Fore.RESET}]  Wystąpił problem z dodaniem słowa do bazy danych. Jeśli błąd będzie się powtarzał, skontaktuj się ze mną na FB lub Discordzie    ')
                     wyjdz()
-                inpt = str(input('\n [?]  Wpisz słowo po angielsku    '))
+                print(f" [{Fore.BLUE}?{Fore.RESET}]  ", end='')
+                inpt = str(input('Wpisz słowo po angielsku    '))
                 try:
                     dictionary.write(f"\n{inpt}")
                 except:
-                    print('\n [!]  Wystąpił problem z dodaniem słowa do bazy danych. Jeśli błąd będzie się powtarzał, skontaktuj się ze mną na FB lub Discordzie    ')
+                    print(f'\n [{Fore.RED}!{Fore.RESET}]  Wystąpił problem z dodaniem słowa do bazy danych. Jeśli błąd będzie się powtarzał, skontaktuj się ze mną na FB lub Discordzie    ')
                     wyjdz()
 
-                print('\n [*]  Słowo zostało pomyślnie dodane do bazy danych. Wróć do Firefoxa i naduś F1\n')
+                print(f'\n [{Fore.GREEN}*{Fore.RESET}]  Słowo zostało pomyślnie dodane do bazy danych. Wróć do Firefoxa i naduś F1\n')
                 
                 while is_pressed('f1') != True:
                     continue
@@ -202,8 +201,8 @@ for i in range(ilee):
                 linesdict = dictionary.readlines()
 
         else:
-            print('\n [*]  W takim razie musisz wpisać i zatwierdzić je ręcznie :(    ')
-            print('\n [*]  Wróć do Firefoxa i naduś F1    ')
+            print(f'\n [{Fore.GREEN}*{Fore.RESET}]  W takim razie musisz wpisać i zatwierdzić je ręcznie :(    ')
+            print(f'\n [{Fore.GREEN}*{Fore.RESET}]  Wróć do Firefoxa i naduś F1    ')
             while is_pressed('f1') != True:
                 continue
 
