@@ -4,7 +4,7 @@ from PIL import Image
 import cv2
 import pytesseract
 from keyboard import is_pressed
-from colorama import Fore, init
+from colorama import Fore, init, Style
 init()
 
 pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
@@ -84,7 +84,7 @@ elif ilee == int(12345):
 
     wyjdz()
 
-print(f' [{Fore.GREEN}*{Fore.RESET}]  Zmień okno na Firefoxa i naduś F1')
+print(f' [{Fore.GREEN}*{Fore.RESET}]  Zmień okno na Firefoxa i naduś F1\n')
 
 while is_pressed('f1') != True:
     continue
@@ -108,7 +108,7 @@ for i in range(ilee):
     if textBef in linesdict:
     #    if linesdict.count(textBef) > 1:
 
-        print(f'\n{textBef}')
+        print(textBef.replace('\n', ''))
         
         pyautogui.typewrite(linesdict[linesdict.index(textBef)+1])
         pyautogui.press('enter')
@@ -127,11 +127,11 @@ for i in range(ilee):
         img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     
         textBef = pytesseract.image_to_string(img, lang='pol')
-        print(f'\n{textBef}')
+        print(textBef)
 
         if textBef not in linesdict:
         
-            dictionary.write(f'\n{str(textBef)}')
+            dictionary.write(f'{str(textBef)}')
             #2 ----------------------------------------------------
             skrin = pyautogui.screenshot(region=(703,355, 655,30))
             skrin.save('lingos.png')
@@ -140,7 +140,7 @@ for i in range(ilee):
             img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 
             textBef = pytesseract.image_to_string(img, lang='pol')
-            print(f'\n{textBef}')
+            print(f'\n • {textBef}')
 
             dictionary.write(f'{str(textBef)}')
 
@@ -157,14 +157,14 @@ for i in range(ilee):
             i = i - 1
 
     else:
-        print(f'\n{textBef}')
+        print(textBef)
 
         if notif == 'True':
             pyautogui.alert(text='Słowo nie zostało znalezione w bazie', title='Lingos Hacker', button='OK')
 
-        inpt = print(f' [{Fore.RED}!{Fore.RESET}]  Słowo nie zostało znalezione w bazie danych')
-        print(f" [{Fore.BLUE}?{Fore.RESET}]  ", end='')
-        inpt= print('Czy chcesz dodać je do bazy danych?  (T/n)    ')
+        print(f' [{Fore.RED}!{Fore.RESET}]  Słowo nie zostało znalezione w bazie danych')
+        #print(f" [{Fore.BLUE}?{Fore.RESET}]  ", end='')
+        #print('Czy chcesz dodać je do bazy danych?  (T/n)    ')
 
         if inpt == 'T' or inpt == 't':
             
@@ -201,8 +201,8 @@ for i in range(ilee):
                 linesdict = dictionary.readlines()
 
         else:
-            print(f'\n [{Fore.GREEN}*{Fore.RESET}]  W takim razie musisz wpisać i zatwierdzić je ręcznie :(    ')
-            print(f'\n [{Fore.GREEN}*{Fore.RESET}]  Wróć do Firefoxa i naduś F1    ')
+            print(f' [{Fore.GREEN}*{Fore.RESET}]  W takim razie musisz wpisać i zatwierdzić je ręcznie :(    ')
+            print(f'\n [{Fore.GREEN}*{Fore.RESET}]  Wróć do Firefoxa i naduś F1    \n')
             while is_pressed('f1') != True:
                 continue
 
