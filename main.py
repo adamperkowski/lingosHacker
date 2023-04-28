@@ -33,15 +33,7 @@ print(f' [ {Fore.RED}L{Fore.GREEN}I{Fore.YELLOW}N{Fore.BLUE}G{Fore.MAGENTA}O{For
 sleep(0.2)
 print(f' [ {Fore.GREEN}lingos{Fore.RESET}.pl {Fore.RED}cheat{Fore.RESET} tool ]')
 sleep(0.2)
-print(f' [ Created by {Fore.RED}A{Fore.GREEN}d{Fore.YELLOW}a{Fore.BLUE}ś{Fore.MAGENTA}k{Fore.CYAN}o{Fore.RESET} ]')
-sleep(0.2)
-print(f' [ GitHub: {Fore.MAGENTA}adas1per{Fore.RESET} ]')
-sleep(0.2)
-print(f' [ Discord: {Fore.BLUE}adask00#0232{Fore.RESET} ]')
-sleep(0.2)
-print(f' [ Snapchat: {Fore.YELLOW}adaskotodebil{Fore.RESET} ]')
-sleep(0.2)
-print(f' [ Instagram: {Fore.GREEN}adas_per{Fore.RESET} ]')
+print(f' [ Discord: {Fore.BLUE}•••#0232{Fore.RESET} ]')
 sleep(0.5)
 print('---------------------------------')
 
@@ -97,13 +89,12 @@ for i in range(ilee):
     x = int()
     sleep(1)
 
-    skrin = pyautogui.screenshot(region=(690,262, 750,30))
-    skrin.save('lingos.png')
+    pyautogui.screenshot(region=(690,262, 750,30)).save('lingos.png')
 
     img = cv2.imread('lingos.png')
     img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 
-    textBef = pytesseract.image_to_string(img, lang='pol')
+    textBef = str(pytesseract.image_to_string(img, lang='pol'))
 
     if textBef in linesdict:
     #    if linesdict.count(textBef) > 1:
@@ -131,7 +122,7 @@ for i in range(ilee):
 
         if textBef not in linesdict:
         
-            dictionary.write(f'{str(textBef)}')
+            dictionary.write(str(textBef))
             #2 ----------------------------------------------------
             skrin = pyautogui.screenshot(region=(703,355, 655,30))
             skrin.save('lingos.png')
@@ -142,9 +133,11 @@ for i in range(ilee):
             textBef = pytesseract.image_to_string(img, lang='pol')
             print(f'\n • {textBef}')
 
-            dictionary.write(f'{str(textBef)}')
+            dictionary.write(str(textBef))
 
             pyautogui.click(pyautogui.locateOnScreen('dalej.png'))
+            #sleep(0.2)
+            #pyautogui.click()
             sleep(0.9)
 
             i = i - 1
