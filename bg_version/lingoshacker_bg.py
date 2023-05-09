@@ -10,6 +10,14 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
+try:
+    dictionary = open("lingos.dict", "r+", encoding='utf8')
+    linesdict = dictionary.readlines()
+except:
+    print(f'{Fore.RED} [!] Wystapil problem z baza danych. Skontaktuj sie z administratorem :){Fore.RESET}')
+    while True:
+        pass
+
 options = Options()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
@@ -17,7 +25,7 @@ PATH = "C:\\Program Files (x86)\\chromedriver.exe"
 driver_service = Service(executable_path=PATH, keep_alive=True)
 driver = webdriver.Chrome(service=driver_service, service_log_path='NUL', options=options)
 
-print(f'{Fore.CYAN} [*] Loaded successfully.{Fore.RESET}')
+print(f'{Fore.CYAN} [*] Loaded successfully.{Fore.RESET}')                                      #Load
 ilee = int(input(f'{Fore.GREEN} [?] Podaj liczbe lekcji: {Fore.RESET}'))
 
 driver.get("https://lingos.pl/students/learning")
