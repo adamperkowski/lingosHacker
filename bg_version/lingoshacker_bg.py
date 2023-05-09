@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-#from time import sleep
+from time import sleep
 
 PATH = "C:\\Program Files (x86)\\chromedriver.exe"
 driver_service = Service(executable_path=PATH)
@@ -17,6 +17,8 @@ find.send_keys(credlist[0])
 find = driver.find_element(By.NAME, 'password')
 find.send_keys(credlist[1])
 cred.close()
+
+driver.implicitly_wait(8)
 
 driver.find_element(By.XPATH, "//img[@src='/public/svg/rocket']").click()
 
