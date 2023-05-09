@@ -1,12 +1,24 @@
+from colorama import Fore, init, Style
+print('Lingos Hacker background support BETA.')
+
+from time import sleep
+sleep(1)
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from time import sleep
+
+options = Options()
+options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
 PATH = "C:\\Program Files (x86)\\chromedriver.exe"
-driver_service = Service(executable_path=PATH)
-driver = webdriver.Chrome(service=driver_service)
+driver_service = Service(executable_path=PATH, keep_alive=True)
+driver = webdriver.Chrome(service=driver_service, service_log_path='NUL', options=options)
+
+print(f'{Fore.CYAN} [*] Loaded successfully.{Fore.RESET}')
+ilee = int(input(f'{Fore.GREEN} [?] Podaj liczbe lekcji: {Fore.RESET}'))
 
 driver.get("https://lingos.pl/students/learning")
 
@@ -21,6 +33,3 @@ cred.close()
 driver.implicitly_wait(8)
 
 driver.find_element(By.XPATH, "//img[@src='/public/svg/rocket']").click()
-
-while True:
-    pass
