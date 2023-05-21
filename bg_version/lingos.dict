@@ -324,6 +324,8 @@ bluza z kapturem
 hoodie
 kamizelka
 vest
+kamizelka
+waistcoat
 płaszcz przeciwdeszczowy
 raincoat
 rajstopy
@@ -362,6 +364,8 @@ zamek (w ubraniu)
 zip
 luźny
 loose
+luźny
+baggy
 obcisły
 tight
 codzienne ubrania
@@ -386,6 +390,8 @@ wełna
 wool
 wełniany
 woollen
+wełniany
+woolly
 wzór
 pattern
 w kropki
@@ -442,6 +448,8 @@ opróżnić zmywarkę
 empty the dishwasher
 zmywać naczynia
 wash the dishes
+zmywać naczynia
+do the washingup
 nakrywać do stołu
 lay the table
 sprzątnąć ze stołu
@@ -556,6 +564,7 @@ expensive to maintain
 okolica
 neighbourhood
 dzielnica
+district
 fence
 na przedmieściach
 in the suburbs
@@ -693,6 +702,8 @@ słuchawki (nauszne)
 headphones
 słuchawki (douszne)
 earphones
+słuchawki (douszne)
+earbuds
 ładowarka
 charger
 głośnik
@@ -860,6 +871,8 @@ w porządku
 all right
 przyjemny
 enjoyable
+przyjemny
+pleasant
 nowoczesny
 modern
 obrzydliwy, ohydny
@@ -1130,6 +1143,7 @@ zarezerwować
 book
 go on foot
 chusteczki
+tissues
 opatrunek
 dressing
 bandaż
@@ -1156,9 +1170,7 @@ kontrolne badanie
 check-up
 opatrzyć ranę
 dress a wound
-krwawi
-
-zy
+krwawić
 bleed
 przytyć
 put on weight
@@ -1474,6 +1486,8 @@ statek
 ship
 zauważyć
 notice
+zauważyć
+spot
 trwać
 last
 topnieć, roztapiać
@@ -1578,8 +1592,10 @@ owoce morza
 seafood
 Patrz pod nogi! / Uważaj, jak idziesz!
 Mind your step!
-uważaj!
+Uważaj!
 watch out!
+Uważaj!
+look out
 niezgodny z zasadami
 against the rules
 wbrew prawu / niezgodny z prawem
@@ -1658,7 +1674,7 @@ proud of
 sprawdzać obecność
 take the register
 Jest mi bardzo gorąco. / Gotuję się.
-Fm boiling.
+Im boiling.
 przemoczony
 soaking
 błoto
@@ -1674,7 +1690,7 @@ bin
 zacieniony
 shady
 przestraszyć
-scdre
+scare
 pchać, popchnąć
 push
 krytykować
@@ -1714,7 +1730,7 @@ endangered
 zagrożone gatunki
 endangered species
 warstwa ozonowa
-ozone ldyer
+ozone layer
 środowisko naturalne
 natural habitat
 park narodowy
@@ -1938,7 +1954,7 @@ oczywiście
 certainly
 Smacznego!
 Enjoy your meal!
- Czy mogę prosić rachunek?
+ Czy mogę prosić rachunek?
 Can I have the bill, please?
 Czy mogę prosić rachunek?
 Can I have the bill, please?
@@ -2008,7 +2024,7 @@ chewing gum
 mąka
 flour
 oliwa z oliwek
-olive
+olive oil
 piekarnia
 bakery
 kuchenka mikrofalowa
@@ -2021,3 +2037,421 @@ maść
 cream
 mieć ochotę
 fancy
+rozwiązać problem
+solve a problem
+podnieść
+lift
+farbować
+dye
+za słaby
+too weak
+niewystarczająco odważny
+not brave enough
+niewystarczająco dobry
+not good enough
+wystarczająco odpowiedzialny
+responsible enough
+film dokumentalny
+documentary
+baśń, bajka
+fairy tale
+lepszy
+better
+gorszy
+worse
+najgorszy
+the worst
+dalej, dalszy
+further
+najdalej, najdalszy
+the furthest
+trochę tańszy
+a little cheaper
+bardziej samolubny
+more selfish
+o wiele bardziej ostrożny
+much more careful
+bardziej zanieczyszczony
+more polluted
+najbardziej bolesny
+the most painful
+drogeria
+beauty store
+księgarnia
+bookshop
+myjnia samochodowa
+car wash
+obsada
+cast
+fabuła
+plot
+reżyser
+director
+przedstawienie teatralne, sztuka
+play
+scena (np. w teatrze)
+stage
+rząd
+row
+miejsce (np. w kinie, samolocie)
+seat
+kasa biletowa (w kinie lub teatrze)
+box office
+kukiełka
+puppet
+kurtyna
+curtain
+aktorstwo
+acting
+napisy
+subtitles
+ścieżka dźwiękowa (do filmu)
+soundtrack
+klaskać
+clap
+klaskać
+applaud
+grać czyjąś rolę
+play the role of
+reżyserować
+direct
+umiejscowiony w (np. akcja filmu w XIX wieku)
+set in
+oparty na
+based on
+warty zobaczenia
+worth seeing
+film przygodowy
+adventure film
+science fiction
+sci-fi
+film katastroficzny
+disaster film
+film kryminalny
+crime film
+film wojenny
+war film
+serial
+series
+telenowela
+soap opera
+odcinek (serialu)
+episode
+kanał (telewizyjny)
+channel
+zwiastun (filmu)
+trailer
+postać
+character
+główna postać
+main character
+bohater
+hero
+scena
+scene
+widownia
+audience
+recenzja
+review
+przebój
+hit
+efekty specjalne
+special effects
+pościg samochodowy
+car chase
+O czym to jest?
+What is it about?
+sklep z rzeczami używanymi, którego dochód przeznaczony jest na cele dobroczynne
+charity shop
+cukiernia
+confectioner's
+niewielki sklepik osiedlowy (np. Żabka)
+corner shop
+dom handlowy
+department store
+sklep z artykułami do wykonywania remontów
+DIY store
+pralnia
+dry cleaner's
+kwiaciarnia
+florist's
+warsztat samochodowy
+garage
+stacja benzynowa
+petrol station
+warzywniak
+greengrocer's
+sklep spożywczy
+grocer's
+kiosk
+newsagent's
+sklep internetowy
+online shop
+poczta
+post office
+sklep z rzeczami używanymi
+second-hand shop
+sklep papierniczy
+stationer's
+dodatki, akcesoria
+accessories
+kosmetyki
+cosmetics
+produkty luksusowe
+luxury items
+kasa
+cash desk
+przymierzalnia
+changing room
+przymierzalnia
+fitting room
+wózek sklepowy
+trolley
+paragon
+receipt
+marka
+brand
+ulotka
+leaflet
+ulotka
+flyer
+banknot
+banknote
+moneta
+coin
+reszta (pieniędzy)
+change
+okazja (cenowa)
+bargain
+kupon
+voucher
+gwarancja
+guarantee
+być na gwarancji
+be under guarantee
+oszczędności
+savings
+kieszonkowe
+pocket money
+skarbonka
+piggybank
+reklama (telewizyjna lub radiowa)
+commercial
+łyżeczka
+teaspoon
+obrus
+tablecloth
+stragan, stoisko
+stall
+samoobsługa
+self-service
+kasa w supermarkecie
+checkout
+pasta do zębów
+toothpaste
+takie drogie składniki
+such expensive ingredients
+taki gorzki
+so bitter
+taki duży napiwek
+such a big tip
+taki ciekawy film
+such an interesting film
+taka słona potrawa
+such a salty dish
+takie niegrzeczne dzieci
+such naughty children
+taki przystojny
+so handsome
+grać (w filmie, teatrze)
+act
+rozrywka
+entertainment
+bawić, zapewniać rozrywkę
+entertain
+produkcja
+production
+produkować
+produce
+producent (filmowy)
+producer
+występ, wykonanie
+performance
+występować, wykonywać
+perform
+wykonawca
+performer
+dostawa
+delivery
+wadliwy
+faulty
+brakuje ...
+is missing
+narzekać
+complain
+zwrócić
+return
+wymienić
+exchange
+zwrot pieniędzy
+refund
+odzyskać pieniądze
+get my money back
+reklamować
+advertise
+wydawać
+spend
+płetwy
+fins
+kły (słonia)
+tusks
+trąba (słonia)
+trunk
+pazury
+claws
+łuski
+scales
+schronisko dla zwierząt
+animal shelter
+szczekać
+bark
+merdać (ogonem)
+wag
+polować na
+hunt for
+na wolności (o zwierzęciu)
+in the wild
+gałąź
+branch
+pasażer
+passenger
+środek transportu
+means of transport
+prom
+ferry
+ciężarówka
+truck
+autokar
+coach
+pojazd
+vehicle
+postój taksówek
+taxi rank
+podróżowanie autostopem
+hitchhiking
+cel podróży
+destination
+ogłoszenie
+announcement
+peron
+platform
+bilet w jedną stronę
+single ticket
+bilet w obie strony
+return ticket
+karta pokładowa
+boarding card
+stanowisko odprawy
+check-in desk
+przylot, przybycie
+arrival
+odlot, odjazd
+departure
+poczekalnia
+waiting room
+miejsce przy oknie
+window seat
+miejsce przy przejściu
+aisle seat
+podróż
+journey
+rejs wycieczkowy
+cruise
+wycieczka objazdowa
+tour
+wyjazd służbowy, delegacja
+business trip
+przewodnik
+tour guide
+bagaż
+luggage
+bagaż
+baggage
+odprawiać się
+check in
+startować (o samolocie)
+take off
+przesiadać się
+change
+odwołać
+cancel
+odwołany (np. lot)
+cancelled
+opóźniony
+delayed
+wyruszyć
+set off
+ciężarówka
+lorry
+zakwaterowanie
+accommodation
+pensjonat
+guesthouse
+zakwaterowanie ze śniadaniem
+Bed and Breakfast
+schronisko górskie
+mountain shelter
+schronisko młodzieżowe
+youth hostel
+pokój jednoosobowy
+single room
+pokój dwuosobowy
+double room
+kemping dla przyczep
+caravan park
+przyczepa kempingowa
+caravan
+kurort, miejscowość turystyczna
+resort
+wakacje zorganizowane
+package holiday
+wycieczka z przewodnikiem
+guided tour
+podróżowanie z plecakiem
+backpacking
+lot
+flight
+krem przeciwsłoneczny
+suncream
+przewodnik (książka)
+guidebook
+zabytki
+sights
+urlopowicz
+holidaymaker
+wesołe miasteczko
+funfair
+szczyt
+peak
+stok
+slope
+kajakarstwo
+canoeing
+nurkowanie (z rurką do oddychania)
+snorkelling
+przewodnik (osoba)
+tour guide
+zwiedzać
+go sightseeing
+gość
+guest
+krzak
+bush
+siebie
+himself
+rzadko
+rarely
+siebie
+herself
+przeprowadzić się
+move house
