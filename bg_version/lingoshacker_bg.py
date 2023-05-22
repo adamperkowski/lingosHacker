@@ -31,7 +31,8 @@ driver.set_page_load_timeout(6)
 actions = ActionChains(driver)
 
 print(f'{Fore.CYAN} [*] Loaded successfully.{Fore.RESET}')                                      #Load
-ilee = int(input(f'{Fore.GREEN} [?] Podaj liczbe slow: {Fore.RESET}'))
+#ilee = int(input(f'{Fore.GREEN} [?] Podaj liczbe slow: {Fore.RESET}'))
+ilee = 20000
 
 driver.get("https://lingos.pl/students/learning")
 
