@@ -1,8 +1,0 @@
-wheel
-pyautogui
-Pillow
-opencv-python
-pytesseract
-keyboard
-notifypy
-colorama
